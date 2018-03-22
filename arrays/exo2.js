@@ -8,6 +8,10 @@
 */
 
 //  écrire votre code sous ce commentaire
+const editArrayAt = (arr, position, value) => {
+  arr.splice(position, 1, value);
+  return arr;
+}
 
 /*
   Test 1

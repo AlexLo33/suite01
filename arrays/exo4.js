@@ -10,12 +10,20 @@
 */
 
 //  écrire votre code sous ce commentaire
+const searchOcc = (arr, occurence) =>  {
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index] === occurence ) {
+      return index;
+    }
+  }
+  return false;
+};
 
 /*
   Test 1
   Résultat attendu : 2
 */
-searchOcc(["Salut", "ça", "va", "?"], "va");
+console.log(searchOcc(["Salut", "ça", "va", "?"], "va"));
 
 /*
   Test 2

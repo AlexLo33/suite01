@@ -10,6 +10,21 @@
 */
 
 //  écrire votre code sous ce commentaire
+const splitStr = (str, occurence) => {
+  let tableau = [];
+  let strChar = "";
+  for (let index = 0; index < str.length; index++) {
+    if (str[index]!= occurence) {
+      strChar = strChar + str[index];
+    }
+    else {
+      tableau.push(strChar)
+      strChar = "";
+    }
+    
+  }  
+  return tableau
+}
 
 /*
   Test 1

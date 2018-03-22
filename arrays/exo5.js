@@ -12,6 +12,8 @@
 
 //  écrire votre code sous ce commentaire
 
+const concatArrays = (arr1, arr2) =>  arr3 = [...arr1, ...arr2] ;
+
 /*
   Test 1
   Résultat attendu : ["bonjour", "ça", "va?", 3, 4]
