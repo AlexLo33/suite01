@@ -8,6 +8,12 @@
 */
 
 //  écrire votre code sous ce commentaire
+function isEvenConcat(nombre) {
+  if (nombre % 2) { 
+    return `${nombre} est impair`; 
+  }  
+  return `${nombre} est pair`;
+}
 
 /*
   Test 1
@@ -15,7 +21,6 @@
 */
 
 isEvenConcat(6);
-
 /*
   Test 2
   Résultat attendu : "5 est impair"

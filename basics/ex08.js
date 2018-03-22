@@ -14,6 +14,24 @@
 */
 
 //  écrire votre code sous ce commentaire
+function isEven(nb) {
+
+  if (nb % 2 === 0) {
+    return 1;
+  }
+  return 0;
+}
+
+function isAllEven(tableau) {
+  for (const iterator of tableau) {
+     if (isEven(iterator)===0) {
+       return 0;
+       break;
+     }
+  }
+  return 1;
+}
+
 
 /*
   Test 1

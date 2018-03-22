@@ -7,6 +7,16 @@
 
 //  écrire votre code sous ce commentaire
 
+function boostedEvenAddition(tableau) {
+  let sum = 0;
+  for (const iterator of tableau) {
+    if (iterator % 2 === 0) {
+      sum += iterator;
+    }
+  }
+  return sum;
+}
+
 /*
   Test 1
   Résultat attendu : 10
