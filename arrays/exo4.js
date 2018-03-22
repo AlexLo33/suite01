@@ -16,7 +16,7 @@ const searchOcc = (arr, occurence) =>  {
       return index;
     }
   }
-  return false;
+  return -1;
 };
 
 /*
