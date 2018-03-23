@@ -12,7 +12,9 @@ describe("Arrays", () => {
   /* Test Exercice 1 */
   describe('Arrays - Exo 1', () => {
     it('should return "j"', () => {
+      const spyedFun = spyOn(String.prototype, "charAt").and.callThrough();
       expect(exo1.getCharAt("bonjour", 3)).toEqual("j");
+      expect(spyedFun).not.toHaveBeenCalled();
     });
 
     it('should return "v"', () => {
@@ -49,7 +51,9 @@ describe("Arrays", () => {
   /* Test Exercice 4 */
   describe('Arrays - Exo 4', () => {
     it('should return 2', () => {
+      const spyedFun = spyOn(Array.prototype, "indexOf").and.callThrough();
       expect(exo4.searchOcc(["Salut", "ça", "va", "?"], "va")).toEqual(2);
+      expect(spyedFun).not.toHaveBeenCalled();
     });
 
     it('should return -1', () => {
@@ -58,20 +62,30 @@ describe("Arrays", () => {
   });
 
   /* Test Exercice 5 */
-  describe('Arrays - Exo 5', () => {
-    it('should return arrays concatenated - 1', () => {
-      expect(exo5.concatArrays(["bonjour"], ["ça", "va?", 3, 4])).toEqual(["bonjour", "ça", "va?", 3, 4]);
+  xdescribe('Arrays - Exo 5', () => {
+    it('should return arrays merged - 1', () => {
+      const spyedFun = spyOn(Array.prototype, "concat").and.callThrough();
+      const arr1 = ["bonjour"];
+      const arr2 = ["ça", "va?", 3, 4];
+      const result = exo5.mergeArrays(arr1, arr2);
+
+      expect(spyedFun).not.toHaveBeenCalled();
+      expect(result).toEqual(["bonjour", "ça", "va?", 3, 4]);
+      expect(arr1).toEqual(["bonjour"]);
+      expect(arr2).toEqual(["ça", "va?", 3, 4]);
     });
 
     it('should return arrays concatenated - 2', () => {
       expect(exo5.concatArrays(["enchanté", "je"], ["m'appelle", "comment?"])).toEqual(["enchanté", "je", "m'appelle", "comment?"]);
-      });
+    });
   });
 
   /* Test Exercice 4 */
   describe('Arrays - Exo 6', () => {
     it('should return sorted array - 1', () => {
+      const spyedFun = spyOn(Array.prototype, "sort").and.callThrough();
       expect(exo6.sortNumbers([4, 3, 5, 2])).toEqual([2, 3, 4, 5]);
+      expect(spyedFun).not.toHaveBeenCalled();
     });
 
     it('should return sorted array - 2', () => {
@@ -82,7 +96,9 @@ describe("Arrays", () => {
   /* Test Exercice 7 */
   describe('Arrays - Exo 7', () => {
     it('should return splitted string - 1', () => {
+      const spyedFun = spyOn(String.prototype, "split").and.callThrough();
       expect(exo7.splitStr("Bonjour comment tu vas ? ça va merci.", " ")).toEqual(["Bonjour", "comment", "tu", "vas", "?", "ça", "va", "merci."]);
+      expect(spyedFun).not.toHaveBeenCalled();
     });
 
     it('should return -1', () => {

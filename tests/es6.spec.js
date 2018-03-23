@@ -6,11 +6,17 @@ xdescribe("Es6", () => {
   // const exo3 = require('../es6/exo3');
   // const exo4 = require('../es6/exo4');
   // const exo5 = require('../es6/exo5');
+  // const exo6 = require('../es6/exo6');
+  // const exo7 = require('../es6/exo7');
+  // const exo8 = require('../es6/exo8');
+  // const exo9 = require('../es6/exo9');
 
   /* Test Exercice 1 */
   xdescribe('Es6 - Exo 1', () => {
     it('should return ["John", "Judith", "Julia"]', () => {
+      const spyedFun = spyOn(Array.prototype, "map").and.callThrough();
       expect(exo1.getAllLastnames([{name: 'John'}, {name: 'Judith'}, {name: 'Julia'}])).toEqual(["John", "Judith", "Julia"]);
+      expect(spyedFun).toHaveBeenCalled();
     });
 
     it('should return ["Marc", "", "Robert"]', () => {
@@ -21,7 +27,9 @@ xdescribe("Es6", () => {
   /* Test Exercice 2 */
   xdescribe('Es6 - Exo 2', () => {
     it('should return [2, 6, 8]', () => {
+      const spyedFun = spyOn(Array.prototype, "filter").and.callThrough();
       expect(exo2.filterEvenNumbers([2, 5, 6, 8])).toEqual([2, 6, 8]);
+      expect(spyedFun).toHaveBeenCalled();
     });
 
     it('should return []', () => {
@@ -36,8 +44,10 @@ xdescribe("Es6", () => {
   /* Test Exercice 3 */
   xdescribe('Es6 - Exo 3', () => {
     it('should return "banane"', () => {
+      const spyedFun = spyOn(Array.prototype, "find").and.callThrough();
       const fruits = [{name: 'orange', color: 'orange'}, {name: 'banane', color: 'jaune'},{name: 'pomme', color: 'rouge'}];
       expect(exo3.findYellowFruit(fruits)).toEqual("banane");
+      expect(spyedFun).toHaveBeenCalled();
     });
 
     it('should return ""', () => {
@@ -49,8 +59,10 @@ xdescribe("Es6", () => {
   /* Test Exercice 4 */
   xdescribe('Es6 - Exo 4', () => {
     it('should return true', () => {
+      const spyedFun = spyOn(Array.prototype, "includes").and.callThrough();
       const vehicules = ["subaru", "volkswagen", "mercedes", "peugeot"];
       expect(exo4.checkVehicles(vehicules, "mercedes")).toBeTruthy();
+      expect(spyedFun).toHaveBeenCalled();
     });
 
     it('should return false', () => {
@@ -62,8 +74,66 @@ xdescribe("Es6", () => {
   /* Test Exercice 5 */
   xdescribe('Es6 - Exo 5', () => {
     it('should return 65', () => {
+      const spyedFun = spyOn(Array.prototype, "reduce").and.callThrough();
       const users = [{name: 'Homer', time: 15}, {name: 'Bart', time: 28}, {name: 'Lisa', time: 22}];
       expect(exo5.countTotalTimeSpent(users)).toEqual(65);
+      expect(spyedFun).toHaveBeenCalled();
+    });
+  });
+
+  /* Test Exercice 6 */
+  xdescribe('Es6 - Exo 6', () => {
+    it('should return ["Thursday", "Friday"]', () => {
+      const spyedFun = spyOn(String.prototype, "split").and.callThrough();
+      expect(exo6.getTwoLastItems("Monday,Tuesday,Wednesday,Thursday,Friday", ",")).toEqual(["Thursday", "Friday"]);
+      expect(spyedFun).toHaveBeenCalled();
+    });
+
+    it('should return ["02", "2018"]', () => {
+      expect(exo6.getTwoLastItems("25/02/2018", "/")).toEqual(["02", "2018"]);
+    });
+  });
+
+  /* Test Exercice 7 */
+  xdescribe('Es6 - Exo 7', () => {
+    it('should return "18/05/2018"', () => {
+      const spyedFun = spyOn(Array.prototype, "join").and.callThrough();
+      expect(exo7.joinDates(['18', '05', '2018'], "/")).toEqual("18/05/2018");
+      expect(spyedFun).toHaveBeenCalled();
+    });
+
+    it('should return "10-12-2018"', () => {
+      expect(exo7.joinDates(['10', '12', '2018'], "-")).toEqual("10-12-2018");
+    });
+
+    it('should return "15052017"', () => {
+      expect(exo7.joinDates(['15', '05', '2017'], "")).toEqual("15052017");
+    });
+  });
+
+  /* Test Exercice 8 */
+  xdescribe('Es6 - Exo 8', () => {
+    it('should return true', () => {
+      const spyedFun = spyOn(Array.prototype, "every").and.callThrough();
+      expect(exo8.verifyHumans([{name: 'John', size: '1m80'}, {name: 'Patrick', size: '1m75'}, {name: 'Marie', size: '1m68'}])).toBeTruthy();
+      expect(spyedFun).toHaveBeenCalled();
+    });
+
+    it('should return false', () => {
+      expect(exo8.verifyHumans([{name: 'John', size: '1m80'}, {name: 'Nicolas', size: '1m55'}, {name: 'Marie', size: '1m68'}])).toBeFalsy();
+    });
+  });
+
+  /* Test Exercice 8 */
+  xdescribe('Es6 - Exo 9', () => {
+    it('should return "Wild Code School Bordeaux"', () => {
+      const spyedFun = spyOn(Array.prototype, "sort").and.callThrough();
+      expect(exo9.sortMyWords([{order: 2, word: 'Code'}, {order: 4, word: 'Bordeaux'}, {order: 1, word: 'Wild'}, {order: 3, word: 'School'}])).toEqual("Wild Code School Bordeaux");
+      expect(spyedFun).toHaveBeenCalled();
+    });
+
+    it('should return "J\'adore programmer en Javascript"', () => {
+      expect(exo9.sortMyWords([{order: 4, word: 'Javascript'}, {order: 1, word: 'J\'adore'}, {order: 3, word: 'en'}, {order: 2, word: 'programmer'}])).toEqual("J'adore programmer en Javascript");
     });
   });
 });
