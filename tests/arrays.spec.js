@@ -1,16 +1,16 @@
-xdescribe("Arrays", () => {
+describe("Arrays", () => {
 
   /* Import exercices */
-  // const exo1 = require('../arrays/exo1');
-  // const exo2 = require('../arrays/exo2');
-  // const exo3 = require('../arrays/exo3');
-  // const exo4 = require('../arrays/exo4');
-  // const exo5 = require('../arrays/exo5');
-  // const exo6 = require('../arrays/exo6');
-  // const exo7 = require('../arrays/exo7');
+   const exo1 = require('../arrays/exo1');
+   const exo2 = require('../arrays/exo2');
+   const exo3 = require('../arrays/exo3');
+   const exo4 = require('../arrays/exo4');
+   const exo5 = require('../arrays/exo5');
+   const exo6 = require('../arrays/exo6');
+   const exo7 = require('../arrays/exo7');
 
   /* Test Exercice 1 */
-  xdescribe('Arrays - Exo 1', () => {
+  describe('Arrays - Exo 1', () => {
     it('should return "j"', () => {
       expect(exo1.getCharAt("bonjour", 3)).toEqual("j");
     });
@@ -21,7 +21,7 @@ xdescribe("Arrays", () => {
   });
 
   /* Test Exercice 2 */
-  xdescribe('Arrays - Exo 2', () => {
+  describe('Arrays - Exo 2', () => {
     it('should return the array modified with "ça"', () => {
       let arr1 = ["bonjour", 4, 5];
       exo2.editArrayAt(arr1, 1, "ça");
@@ -36,7 +36,7 @@ xdescribe("Arrays", () => {
   });
 
   /* Test Exercice 3 */
-  xdescribe('Arrays - Exo 3', () => {
+  describe('Arrays - Exo 3', () => {
     it('should return "bondour"', () => {
       expect(exo3.editStringAt("Bonjour", 3, "d")).toEqual("Bondour");
     });
@@ -47,7 +47,7 @@ xdescribe("Arrays", () => {
   });
 
   /* Test Exercice 4 */
-  xdescribe('Arrays - Exo 4', () => {
+  describe('Arrays - Exo 4', () => {
     it('should return 2', () => {
       expect(exo4.searchOcc(["Salut", "ça", "va", "?"], "va")).toEqual(2);
     });
@@ -58,7 +58,7 @@ xdescribe("Arrays", () => {
   });
 
   /* Test Exercice 5 */
-  xdescribe('Arrays - Exo 5', () => {
+  describe('Arrays - Exo 5', () => {
     it('should return arrays concatenated - 1', () => {
       expect(exo5.concatArrays(["bonjour"], ["ça", "va?", 3, 4])).toEqual(["bonjour", "ça", "va?", 3, 4]);
     });
@@ -69,7 +69,7 @@ xdescribe("Arrays", () => {
   });
 
   /* Test Exercice 4 */
-  xdescribe('Arrays - Exo 6', () => {
+  describe('Arrays - Exo 6', () => {
     it('should return sorted array - 1', () => {
       expect(exo6.sortNumbers([4, 3, 5, 2])).toEqual([2, 3, 4, 5]);
     });
@@ -80,7 +80,7 @@ xdescribe("Arrays", () => {
   });
 
   /* Test Exercice 7 */
-  xdescribe('Arrays - Exo 7', () => {
+  describe('Arrays - Exo 7', () => {
     it('should return splitted string - 1', () => {
       expect(exo7.splitStr("Bonjour comment tu vas ? ça va merci.", " ")).toEqual(["Bonjour", "comment", "tu", "vas", "?", "ça", "va", "merci."]);
     });
