@@ -11,12 +11,17 @@
 
 //  écrire votre code sous ce commentaire
 
+const sortMyWords = _arr => _arr.sort( (a, b) => (a.order - b.order) ).map(_arr => _arr.word).join(' ')
+
 /*
   Test 1
   Résultat attendu : "Wild Code School Bordeaux"
 */
 
 sortMyWords([{order: 2, word: 'Code'}, {order: 4, word: 'Bordeaux'}, {order: 1, word: 'Wild'}, {order: 3, word: 'School'}]);
+
+console.log(sortMyWords([{ order: 2, word: 'Code' }, { order: 4, word: 'Bordeaux' }, { order: 1, word: 'Wild' }, { order: 3, word: 'School' }]));
+
 
 /*
   Test 2

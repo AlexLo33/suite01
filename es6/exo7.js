@@ -11,6 +11,8 @@
 
 //  écrire votre code sous ce commentaire
 
+const joinDates = (_arr, _pattern) => _arr.join(_pattern);
+
 /*
   Test 1
   Résultat attendu : "18/05/2018"

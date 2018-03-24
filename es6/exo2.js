@@ -11,6 +11,8 @@
 
 //  écrire votre code sous ce commentaire
 
+const filterEvenNumbers = (arr) => arr.filter((arr) => (arr % 2) - 1);
+
 /*
   Test 1
   Résultat attendu : [2, 6, 8]

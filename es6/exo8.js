@@ -2,13 +2,15 @@
   Entraînement Array.prototype.every
 
   Ecrire une fonction "verifyHumans"
-  qui permet de cérifier si toutes les personnes présentes font au moins 1m60
+  qui permet de vérifier si toutes les personnes présentes font au moins 1m60
 
   Prototype:
       bool verifyHumans(_arr);
 */
 
 //  écrire votre code sous ce commentaire
+
+const verifyHumans = _arr => _arr.every( _arr => _arr.size >= '1m60');
 
 /*
   Test 1
@@ -22,7 +24,7 @@ verifyHumans([{name: 'John', size: '1m80'}, {name: 'Patrick', size: '1m75'}, {na
   Résultat attendu : false
 */
 
-verifyHumans([{name: 'John', size: '1m80'}, {name: 'Nicolas', size: '1m55'}, {name: 'Marie', size: '1m68'}]);
+verifyHumans([{ name: 'John', size: '1m80' }, { name: 'Nicolas', size: '1m55' }, { name: 'Marie', size: '1m68' }]);
 
 /* DO NOT TOUCH */
 module.exports = {

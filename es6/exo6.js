@@ -11,6 +11,8 @@
 
 //  écrire votre code sous ce commentaire
 
+const getTwoLastItems = (_str, _pattern) => _str.split(_pattern).slice(-2);
+
 /*
   Test 1
   Résultat attendu : ["Thursday", "Friday"]
