@@ -5,8 +5,10 @@ module.exports = function(config) {
     files = `tests/${config.module}.spec.js`;
   }
 
+  process.env.CHROME_BIN = require('puppeteer').executablePath()
+
   config.set({
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
     frameworks: ['jasmine', 'browserify'],
     preprocessors: {
       'tests/**/*.spec.js': ['browserify']
@@ -19,7 +21,7 @@ module.exports = function(config) {
       suppressPassed: true, // do not print information about passed tests
       suppressSkipped: true, // do not print information about skipped tests
       showSpecTiming: false, // print the time elapsed for each spec
-      failFast: false // test would finish with error when a first fail occurs. 
+      failFast: false // test would finish with error when a first fail occurs.
     },
     webpack: {
       module: {
