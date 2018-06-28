@@ -6,7 +6,7 @@ module.exports = function(config) {
   }
 
   config.set({
-    browsers: ['google-chrome-stable'],
+    browsers: ['google', 'Chrome_without_security'],
     frameworks: ['jasmine', 'browserify'],
     preprocessors: {
       'tests/**/*.spec.js': ['browserify']
