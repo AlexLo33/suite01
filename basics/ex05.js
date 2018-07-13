@@ -8,6 +8,10 @@
 */
 
 //  écrire votre code sous ce commentaire
+const isEvenConcat = (nombre) => {
+  return (nombre % 2 == 0) ? `${nombre} est pair` : `${nombre} est impair`;
+}
+
 
 /*
   Test 1

@@ -12,6 +12,9 @@
 */
 
 //  écrire votre code sous ce commentaire
+const addition = (n1, n2) => {
+  return n1 + n2;
+}
 
 /*
   Test 1
