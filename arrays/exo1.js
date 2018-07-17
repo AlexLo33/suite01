@@ -12,12 +12,20 @@
 
 //  écrire votre code sous ce commentaire
 
+const getCharAt = (str, position) => {
+
+  return str.substring(position, position + 1);
+
+}
+
 /*
   Test 1
   Résultat attendu : "j"
 */
 
 getCharAt("bonjour", 3);
+
+
 
 /*
   Test 2

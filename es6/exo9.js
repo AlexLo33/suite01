@@ -11,6 +11,10 @@
 
 //  écrire votre code sous ce commentaire
 
+const sortMyWords = (arr) => {
+  return arr.sort(function(a, b) {return a.order - b.order;}).map( a => {return a.word}).join(' ') ;
+}
+
 /*
   Test 1
   Résultat attendu : "Wild Code School Bordeaux"

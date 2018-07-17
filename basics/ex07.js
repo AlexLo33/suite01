@@ -6,6 +6,10 @@
 */
 
 //  écrire votre code sous ce commentaire
+const boostedAddition = (tableau) => {
+  return tableau.reduce((a, b)=> a + b);
+}
+
 
 /*
   Test 1
@@ -21,6 +25,6 @@ boostedAddition([4, 5, 6]);
 boostedAddition([4, 4, 6, 8, 10, 12]);
 
 /* DO NOT TOUCH */
-module.exports = {
+ module.exports = {
   boostedAddition: boostedAddition
-}
+} 

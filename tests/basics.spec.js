@@ -6,10 +6,10 @@ describe("Basics", () => {
   const exo4 = require('../basics/ex04');
   const exo5 = require('../basics/ex05');
   const exo6 = require('../basics/ex06');
-  // const exo7 = require('../basics/ex07');
-  // const exo8 = require('../basics/ex08');
-  // const exo9 = require('../basics/ex09');
-  // const exo10 = require('../basics/ex10');
+  const exo7 = require('../basics/ex07');
+  const exo8 = require('../basics/ex08');
+  const exo9 = require('../basics/ex09');
+  const exo10 = require('../basics/ex10');
 
   /* Test Exercice 2 */
   describe('Basics - Exo 2', () => {
@@ -79,7 +79,7 @@ describe("Basics", () => {
   });
 
   /* Test Exercice 7 */
-  xdescribe('Basics - Exo 7', () => {
+  describe('Basics - Exo 7', () => {
     it('should return 15', () => {
       expect(exo7.boostedAddition([4, 5, 6])).toEqual(15);
     });
@@ -90,7 +90,7 @@ describe("Basics", () => {
   });
 
   /* Test Exercice 8 */
-  xdescribe('Basics - Exo 8', () => {
+  describe('Basics - Exo 8', () => {
     it('should return 0', () => {
       expect(exo8.isAllEven([4, 5, 6])).toEqual(0);
     });
@@ -101,7 +101,7 @@ describe("Basics", () => {
   });
 
   /* Test Exercice 9 */
-  xdescribe('Basics - Exo 2', () => {
+  describe('Basics - Exo 2', () => {
     it('should return 10', () => {
       expect(exo9.boostedEvenAddition([4, 5, 6])).toEqual(10);
     });
@@ -112,7 +112,7 @@ describe("Basics", () => {
   });
 
   /* Test Exercice 10 */
-  xdescribe('Basics - Exo 10', () => {
+  describe('Basics - Exo 10', () => {
     it('should return an object with the correct number of fruits', () => {
       expect(exo10.shoppingList([
           ["orange", "orange", "kiwi", "ananas"],

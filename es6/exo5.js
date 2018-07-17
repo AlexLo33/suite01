@@ -11,6 +11,12 @@
 
 //  écrire votre code sous ce commentaire
 
+const countTotalTimeSpent = (arr) => {
+
+   return arr.reduce((a, b) => a + b.time, 0);
+
+}
+
 /*
   Test 1
   Résultat attendu : 65

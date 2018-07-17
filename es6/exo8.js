@@ -8,6 +8,12 @@
       bool verifyHumans(_arr);
 */
 
+const verifyHumans = (arr) => {
+  return arr.every(function (a) {
+       return a.size.localeCompare('1m60') > 0 ;
+  });
+}
+
 //  écrire votre code sous ce commentaire
 
 /*

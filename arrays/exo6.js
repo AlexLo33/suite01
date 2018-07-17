@@ -8,6 +8,20 @@
       Array.prototype.sort
 */
 
+const sortNumbers = (arr) => {
+
+  for(let i = 0; i < arr.length; i++){
+    for(let j = i; j < arr.length; j++){
+        if(arr[i] > arr[j]){
+          let tamp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = tamp;
+        }
+    }    
+  }
+  return arr;
+}
+
 //  écrire votre code sous ce commentaire
 
 /*

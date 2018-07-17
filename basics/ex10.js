@@ -12,6 +12,25 @@
 */
 
 //  écrire votre code sous ce commentaire
+const shoppingList = (tableau) => {
+  const tab = tableau.reduceRight( (a, b) =>  a.concat(b) ).sort(function (a, b) {
+    return a.localeCompare(b);
+  });
+  const result = {};
+  let indiceTemoin = '';
+  for(let i in tab){
+    if(tab[i] !== indiceTemoin){
+        indiceTemoin = tab[i];
+        result[indiceTemoin] = 1;
+    } else {
+      result[indiceTemoin] += 1;
+    }
+  }
+ return result; 
+  
+}
+
+
 
 /*
   Test 1
