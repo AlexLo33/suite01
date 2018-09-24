@@ -8,6 +8,9 @@
 */
 
 //  écrire votre code sous ce commentaire
+const isEven = (n1) => {
+  return (n1 % 2 === 0) ? 1 : 0;
+}
 
 /*
   Test 1

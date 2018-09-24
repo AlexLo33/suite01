@@ -9,6 +9,9 @@
       arr getAllLastnames(arr);
 */
 
+const getAllLastnames = (arr) => {
+  return arr.map( a => {return (a.name)? a.name : ''}) ;
+}
 //  écrire votre code sous ce commentaire
 
 /*

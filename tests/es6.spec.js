@@ -1,18 +1,18 @@
-xdescribe("Es6", () => {
+describe("Es6", () => {
 
   /* Import exercices */
-  // const exo1 = require('../es6/exo1');
-  // const exo2 = require('../es6/exo2');
-  // const exo3 = require('../es6/exo3');
-  // const exo4 = require('../es6/exo4');
-  // const exo5 = require('../es6/exo5');
-  // const exo6 = require('../es6/exo6');
-  // const exo7 = require('../es6/exo7');
-  // const exo8 = require('../es6/exo8');
-  // const exo9 = require('../es6/exo9');
+  const exo1 = require('../es6/exo1');
+  const exo2 = require('../es6/exo2');
+  const exo3 = require('../es6/exo3');
+  const exo4 = require('../es6/exo4');
+  const exo5 = require('../es6/exo5');
+  const exo6 = require('../es6/exo6');
+  const exo7 = require('../es6/exo7');
+  const exo8 = require('../es6/exo8');
+  const exo9 = require('../es6/exo9');
 
   /* Test Exercice 1 */
-  xdescribe('Es6 - Exo 1', () => {
+  describe('Es6 - Exo 1', () => {
     it('should return ["John", "Judith", "Julia"]', () => {
       const spyedFun = spyOn(Array.prototype, "map").and.callThrough();
       expect(exo1.getAllLastnames([{name: 'John'}, {name: 'Judith'}, {name: 'Julia'}])).toEqual(["John", "Judith", "Julia"]);
@@ -25,7 +25,7 @@ xdescribe("Es6", () => {
   });
 
   /* Test Exercice 2 */
-  xdescribe('Es6 - Exo 2', () => {
+  describe('Es6 - Exo 2', () => {
     it('should return [2, 6, 8]', () => {
       const spyedFun = spyOn(Array.prototype, "filter").and.callThrough();
       expect(exo2.filterEvenNumbers([2, 5, 6, 8])).toEqual([2, 6, 8]);
@@ -42,7 +42,7 @@ xdescribe("Es6", () => {
   });
 
   /* Test Exercice 3 */
-  xdescribe('Es6 - Exo 3', () => {
+  describe('Es6 - Exo 3', () => {
     it('should return "banane"', () => {
       const spyedFun = spyOn(Array.prototype, "find").and.callThrough();
       const fruits = [{name: 'orange', color: 'orange'}, {name: 'banane', color: 'jaune'},{name: 'pomme', color: 'rouge'}];
@@ -57,7 +57,7 @@ xdescribe("Es6", () => {
   });
 
   /* Test Exercice 4 */
-  xdescribe('Es6 - Exo 4', () => {
+  describe('Es6 - Exo 4', () => {
     it('should return true', () => {
       const spyedFun = spyOn(Array.prototype, "includes").and.callThrough();
       const vehicules = ["subaru", "volkswagen", "mercedes", "peugeot"];
@@ -72,7 +72,7 @@ xdescribe("Es6", () => {
   });
 
   /* Test Exercice 5 */
-  xdescribe('Es6 - Exo 5', () => {
+  describe('Es6 - Exo 5', () => {
     it('should return 65', () => {
       const spyedFun = spyOn(Array.prototype, "reduce").and.callThrough();
       const users = [{name: 'Homer', time: 15}, {name: 'Bart', time: 28}, {name: 'Lisa', time: 22}];
@@ -82,7 +82,7 @@ xdescribe("Es6", () => {
   });
 
   /* Test Exercice 6 */
-  xdescribe('Es6 - Exo 6', () => {
+  describe('Es6 - Exo 6', () => {
     it('should return ["Thursday", "Friday"]', () => {
       const spyedFun = spyOn(String.prototype, "split").and.callThrough();
       expect(exo6.getTwoLastItems("Monday,Tuesday,Wednesday,Thursday,Friday", ",")).toEqual(["Thursday", "Friday"]);
@@ -95,7 +95,7 @@ xdescribe("Es6", () => {
   });
 
   /* Test Exercice 7 */
-  xdescribe('Es6 - Exo 7', () => {
+  describe('Es6 - Exo 7', () => {
     it('should return "18/05/2018"', () => {
       const spyedFun = spyOn(Array.prototype, "join").and.callThrough();
       expect(exo7.joinDates(['18', '05', '2018'], "/")).toEqual("18/05/2018");
@@ -112,7 +112,7 @@ xdescribe("Es6", () => {
   });
 
   /* Test Exercice 8 */
-  xdescribe('Es6 - Exo 8', () => {
+  describe('Es6 - Exo 8', () => {
     it('should return true', () => {
       const spyedFun = spyOn(Array.prototype, "every").and.callThrough();
       expect(exo8.verifyHumans([{name: 'John', size: '1m80'}, {name: 'Patrick', size: '1m75'}, {name: 'Marie', size: '1m68'}])).toBeTruthy();
@@ -125,7 +125,7 @@ xdescribe("Es6", () => {
   });
 
   /* Test Exercice 8 */
-  xdescribe('Es6 - Exo 9', () => {
+  describe('Es6 - Exo 9', () => {
     it('should return "Wild Code School Bordeaux"', () => {
       const spyedFun = spyOn(Array.prototype, "sort").and.callThrough();
       expect(exo9.sortMyWords([{order: 2, word: 'Code'}, {order: 4, word: 'Bordeaux'}, {order: 1, word: 'Wild'}, {order: 3, word: 'School'}])).toEqual("Wild Code School Bordeaux");

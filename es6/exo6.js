@@ -9,6 +9,13 @@
       arr getTwoLastItems(_str, _pattern);
 */
 
+const getTwoLastItems = (str, pattern) => {
+    
+    let tab = str.split(pattern);
+    return tab.slice(tab.length - 2, tab.length);
+
+}
+
 //  écrire votre code sous ce commentaire
 
 /*

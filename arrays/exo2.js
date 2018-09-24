@@ -9,6 +9,11 @@
 
 //  écrire votre code sous ce commentaire
 
+const editArrayAt = (tab, pos, val) => {
+  tab[pos] = val;
+  return tab;
+}
+
 /*
   Test 1
   Résultat attendu : ["bonjour", "ça", 5]

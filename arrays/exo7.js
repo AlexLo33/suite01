@@ -10,6 +10,24 @@
       - String.prototype.split
 */
 
+const splitStr = (str, occurence) => {
+
+  let long = str.length;
+  let mot = '';
+  const tab = [];
+  let compt = 0;
+  for (let i = 0; i <= long; i++) {
+    if(str[i] != occurence && i != long){
+      mot += str[i];
+    } else {
+      tab[compt] = mot;
+      compt++;
+      mot = ''; 
+    }
+  }
+  return tab;
+}
+
 //  écrire votre code sous ce commentaire
 
 /*

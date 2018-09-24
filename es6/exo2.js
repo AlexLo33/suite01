@@ -9,6 +9,10 @@
       arr filterEvenNumbers(arr);
 */
 
+const filterEvenNumbers = (arr) => {
+  return arr.filter(a => (a % 2) === 0);
+}
+
 //  écrire votre code sous ce commentaire
 
 /*

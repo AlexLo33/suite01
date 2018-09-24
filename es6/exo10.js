@@ -11,6 +11,29 @@
   BONNE CHANCE !!
 */
 
+
+const DecrypteMot2 = (str) => {
+  let mot = str.split('-');
+  let n;
+  for(let i in mot){
+    n = '';
+    for(let j = mot[i].length - 1; j >=0; j--){
+      n += mot[i].charAt(j);
+    }
+    mot[i] = n;  
+  } 
+  return mot.map(a => {return String.fromCharCode(parseFloat(a))}).join('');
+
+}
+
+const DecrypteLists = (tabObj) => {
+  //tabObj.map(a => {console.log('YOUHOU', a.list)});
+  return tabObj.map(a => {return a.list.map(b => { return DecrypteMot2(b)} ) });
+
+}
+
+
+
 const groupes = [{
     list: [
         '56-901-101-801-501-101',
@@ -48,3 +71,6 @@ const groupes = [{
         '38-611-101-211-401-79-011-101'
     ]
 }];
+
+console.log( DecrypteLists(groupes) );
+console.log(DecrypteMot2('37-611-23-911-79-511-23-601-711-511-611-23-79-23-211-411-79-011-701-23-89-411-111'));

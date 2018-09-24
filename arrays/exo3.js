@@ -8,6 +8,12 @@
 */
 
 //  écrire votre code sous ce commentaire
+const editStringAt = (str, position, char) => {
+  let tab = str.split('');
+  tab[position] = char;
+  return tab.join(''); 
+}
+
 
 /*
   Test 1

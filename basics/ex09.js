@@ -6,6 +6,10 @@
 */
 
 //  écrire votre code sous ce commentaire
+boostedEvenAddition = (tableau) => {
+  return tab = tableau.map( (a) => { return (a % 2 === 0) ? a : 0 } ).reduce((a, b)=> a + b);
+}
+
 
 /*
   Test 1

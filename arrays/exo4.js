@@ -10,6 +10,14 @@
       - Array.prototype.indexOf
 */
 
+const searchOcc = (arr, occurence) => {
+  let retour = -1;
+  for(let i in arr){
+    if(arr[i] == occurence){retour = parseFloat(i);}
+  }
+  return retour;
+}
+
 //  écrire votre code sous ce commentaire
 
 /*

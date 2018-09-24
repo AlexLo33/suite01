@@ -12,6 +12,26 @@
 
 //  écrire votre code sous ce commentaire
 
+const getHumanTypeByAge = (nombre) => {
+
+  if(nombre >= 1 && nombre < 12)
+  {
+    return 'enfant';
+  } 
+  else if(nombre >= 12 && nombre < 18) 
+  {
+    return 'ado';
+  }
+  else if(nombre >= 18 && nombre < 124)
+  {
+    return 'adulte';
+  } 
+  else {
+    return 'impossible... ou encore jamais vu';
+  }
+
+}
+
 /*
   Test 1
   Résultat attendu : "impossible... ou encore jamais vu"
