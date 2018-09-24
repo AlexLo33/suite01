@@ -11,6 +11,7 @@
 */
 
 //  écrire votre code sous ce commentaire
+const getCharAt = (str, index) =>  str[index]
 
 /*
   Test 1

@@ -7,6 +7,14 @@
 
 //  écrire votre code sous ce commentaire
 
+function boostedAddition(tableau) {
+  let sum = 0;
+  for (const iterator of tableau ) {
+     sum += iterator;
+  }
+  return sum;
+}
+
 /*
   Test 1
   Résultat attendu : 15

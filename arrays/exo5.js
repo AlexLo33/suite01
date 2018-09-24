@@ -14,6 +14,8 @@
 //  écrire votre code sous ce commentaire
 const mergeArrays = (arr1, arr2) => [...arr1, ...arr2]
 
+const concatArrays = (arr1, arr2) =>  arr3 = [...arr1, ...arr2] ;
+
 /*
   Test 1
   Résultat attendu : ["bonjour", "ça", "va?", 3, 4]

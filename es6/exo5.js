@@ -10,13 +10,16 @@
 */
 
 //  écrire votre code sous ce commentaire
+const countTotalTimeSpent = arr => arr.reduce( (a, b) => a + b.time, 0);
 
 /*
   Test 1
   Résultat attendu : 65
 */
 
-countTotalTimeSpent([{name: 'Homer', time: 15}, {name: 'Bart', time: 28}, {name: 'Lisa', time: 22}]);
+countTotalTimeSpent([{ name: 'Homer', time: 15 }, { name: 'Bart', time: 28 }, { name: 'Lisa', time: 22 }]);
+console.log(countTotalTimeSpent([{ name: 'Homer', time: 15 }, { name: 'Bart', time: 28 }, { name: 'Lisa', time: 22 }])
+)
 
 /* DO NOT TOUCH */
 module.exports = {

@@ -8,6 +8,7 @@
 */
 
 //  écrire votre code sous ce commentaire
+const editStringAt = ([...str], position, char) => str.splice(position, 1, char).join("")
 
 /*
   Test 1
